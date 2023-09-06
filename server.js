@@ -8,5 +8,5 @@ const url = process.env.MONGO_URI;
 connectDb(url)
 
 app.listen(port, () => {
-    console.log("Server is Working")
+    console.log(`Server is Working on port : ${process.env.PORT} in ${process.env.NODE_ENV} mode`)
 })
