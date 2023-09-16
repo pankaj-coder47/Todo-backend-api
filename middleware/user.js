@@ -5,7 +5,7 @@ const connectDb = (url) =>{
         mongoose.connect(url,{
             dbName:"TodoBackend"
         })
-        .then(()=>console.log("Connection is established"))
+        .then((e)=>console.log(`Connection is established on host ${e.connection.host}`))
         .catch((err)=>{
             console.log(err)
         })
