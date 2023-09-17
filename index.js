@@ -30,7 +30,7 @@ app.use(cors({
 
 //Routes 
 app.get('/', (req, res) => {
-    res.send("<h1>Welcome</h1>")
+    res.send("<h1> Welcome to my your api </h1>")
 })
 
 app.use(errorMiddleware);//Error middleware Use as next parameter
