@@ -15,6 +15,12 @@ config({
 
 
 //Using Middleware
+app.use(cors({
+    origin: 'http://localhost:5173',
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true
+}));
+
 app.use(express.json());//use always top of router
 app.use(cookieParser());// use cookies parser for access cookies
 
@@ -22,11 +28,8 @@ app.use(cookieParser());// use cookies parser for access cookies
 app.use("/api/v1/users", UseRouter)///api/v1 routes for like know for this is api version 1
 app.use("/api/v1/task", UseTask)
 
-app.use(cors({
-    origin:[process.env.FRONTEND_URI],
-    methods:["GET","POST","PUT","DELETE"],
-    credentials:true
-}))
+
+
 
 //Routes 
 app.get('/', (req, res) => {
