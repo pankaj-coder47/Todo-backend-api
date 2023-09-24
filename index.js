@@ -16,7 +16,7 @@ config({
 
 //Using Middleware
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://todo-frontend-livid-mu.vercel.app/' || process.env.FRONTEND_URI,
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 }));
